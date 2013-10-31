@@ -16,20 +16,22 @@ namespace AF_CS_BO
         public string residentialStatus;
         public int personnalScore;
         private string var1, var2;
-        //public IEnumerable<Personnal_Details> GetEnumerator();
+       
         
-        //int position = -1;
+        //public IEnumerable<Personnal_Details> abstract  Personnal_Details  GetEnumerator(int i)
         
-        ////public object Current;
 
-        ////public void Reset();
+        int position = -1;
 
-        //public int MoveNext()
-      
-        //{
-        //    position ++;
-        //    return position;
-        //}
+        //public object Current;
+
+        //public void Reset();
+
+        public int MoveNext()
+        {
+            position++;
+            return position;
+        }
 
 
 
@@ -43,7 +45,7 @@ namespace AF_CS_BO
             
         }
         
-        enum resStatus
+      public  enum resStatus
         { 
            
             owner_with_mortgage = 10,
@@ -54,18 +56,18 @@ namespace AF_CS_BO
 
         };
 
-        //public void SetScore()
-        //{
-            
-            
-        //    foreach (resStatus resisentialStatus in new Personnal_Details.resStatus())
-        //    { 
-        //        if (residentialStatus == String.Format("owner_with_no_mortgage"))
-        //        {
-        //            personnalScore = Convert.ToInt32(resStatus.owner_with_no_mortgage);
+        public void SetScore()
+        {
 
-        //        }
-        //    }
-        //}
+            resStatus residentialStatus = new Personnal_Details.resStatus();
+           //resStatus residentialStatus in new Personnal_Details.resStatus();
+           // {
+           //     if (residentialStatus == String.Format("owner_with_no_mortgage"))
+           //     {
+           //         personnalScore = Convert.ToInt32(resStatus.owner_with_no_mortgage);
+
+           //     }
+           // }
+        }
     }
 }

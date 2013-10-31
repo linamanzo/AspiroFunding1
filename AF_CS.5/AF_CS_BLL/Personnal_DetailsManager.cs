@@ -21,6 +21,10 @@ namespace AF_CS_BLL
        // {
        //     apersD = new Personnal_Details();
        //}
+
+        public Personnal_DetailsManager()
+        {
+        }
        public Personnal_DetailsManager( int iDpersD)
        {   persdDAO = new DB_Personnal_Details_DAO();
           
@@ -35,6 +39,12 @@ namespace AF_CS_BLL
            return score;
        }
 
+       public void setScore()
+       {
+           apersD = new Personnal_Details();
+           apersD.SetScore();
+           
+       }
       //public Personnal_Details Getpersd(int id)
       // { return persdDAO.GetById(id); }
 

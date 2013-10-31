@@ -67,12 +67,14 @@ namespace AF_CS
         {
             try
             {
-                int id = Convert.ToInt32(textBox2.Text);
-                persmanager = new Personnal_DetailsManager(id);
+                persmanager = new Personnal_DetailsManager( );
+                persmanager.setScore();
+            //    int id = Convert.ToInt32(textBox2.Text);
+            //    persmanager = new Personnal_DetailsManager(id);
 
-                int score = persmanager.GetScore(id);
-                textBox1.Text = String.Format("{0:C}", score);
-                textBox1.Focus();
+            //    int score = persmanager.GetScore(id);
+            //    textBox1.Text = String.Format("{0:C}", score);
+            //    textBox1.Focus();
             }
             catch (Exception ex)
             {
