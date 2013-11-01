@@ -44,55 +44,47 @@ namespace AF_CS_BO
         {
             
         }
-    [Flags]
-      public  enum resStatus
-        { 
+    //[Flags]
+    //  public  enum resStatus
+    //    { 
             
-           owner_with_mortgage = 10,
-            owner_with_no_mortgage = 40,
-            renting = 10,
-            living_with_parents = 20
+    //       owner_with_mortgage = 10,
+    //        owner_with_no_mortgage = 40,
+    //        renting = 10,
+    //        living_with_parents = 20
 
 
-        };
+    //    }
 
-        public int SetScore(string res)
-      {
+      //  public int SetScore(string res)
+      //{
           
-         try{if (res == Convert.ToString(resStatus.owner_with_mortgage))
-             { int r = (int)resStatus.owner_with_mortgage;
-                 residentialscore = r;
-             }
-             if (res == Convert.ToString(resStatus.renting))
-             {
-                 int r
-                     = (int)resStatus.renting;
-                 residentialscore = r;
-             }
-             if (res == Convert.ToString(resStatus.living_with_parents))
-             {
-                 int r
-                     = (int)resStatus.living_with_parents;
-                 residentialscore = r;
-             }
-             if (res == Convert.ToString(resStatus.owner_with_no_mortgage))
-             {
-                 int r
-                     = (int)resStatus.owner_with_no_mortgage;
-                 residentialscore = r;
-             }
-         }
-             finally{
-          }return  residentialscore;}
-       //return  residentialscore;
-          
-           // {
-           //     if (residentialStatus == String.Format("owner_with_no_mortgage"))
-           //     {
-           //         personnalScore = Convert.ToInt32(resStatus.owner_with_no_mortgage);
-
-           //     }
-           // }
+      //   try{if (res == Convert.ToString(resStatus.owner_with_mortgage))
+      //       { int r = (int)resStatus.owner_with_mortgage;
+      //           residentialscore = r;
+      //       }
+      //       if (res == Convert.ToString(resStatus.renting))
+      //       {
+      //           int r
+      //               = (int)resStatus.renting;
+      //           residentialscore = r;
+      //       }
+      //       if (res == Convert.ToString(resStatus.living_with_parents))
+      //       {
+      //           int r
+      //               = (int)resStatus.living_with_parents;
+      //           residentialscore = r;
+      //       }
+      //       if (res == Convert.ToString(resStatus.owner_with_no_mortgage))
+      //       {
+      //           int r
+      //               = (int)resStatus.owner_with_no_mortgage;
+      //           residentialscore = r;
+      //       }
+      //   }
+      //       finally{
+      //    }return  residentialscore;}
+       
         }
     }
 

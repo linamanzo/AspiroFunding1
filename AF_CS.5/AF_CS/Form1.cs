@@ -19,6 +19,7 @@ namespace AF_CS
         private Job_ProspectManager jobpmanager;
         private Job_HistoryManager jobhmanager;
         private Financial_DetailsManager financialmanager;
+        private Score_CardManager scorecardmanager;
         public Form1()
         {
             InitializeComponent();
@@ -67,8 +68,9 @@ namespace AF_CS
         {
             try
             {
-                persmanager = new Personnal_DetailsManager( );
-                persmanager.setScore(textBox4.Text);
+                scorecardmanager = new Score_CardManager( );
+                scorecardmanager.setScore(textBox4.Text, textBox3.Text);
+                textBox1.Text = Convert.ToString(this.scorecardmanager.ascoreCard.personalscore);
             //    int id = Convert.ToInt32(textBox2.Text);
             //    persmanager = new Personnal_DetailsManager(id);
 

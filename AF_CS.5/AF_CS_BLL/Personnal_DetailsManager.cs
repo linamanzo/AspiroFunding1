@@ -11,6 +11,7 @@ namespace AF_CS_BLL
    public class Personnal_DetailsManager
     { 
        public Personnal_Details apersD { get; set; }
+       
         private Personnal_DetailsManager persDmanager;
         public int id;
        
@@ -39,16 +40,15 @@ namespace AF_CS_BLL
            return score;
        }
 
-       public int setScore(string res)
-       {  apersD = new Personnal_Details();
-       apersD.residentialStatus = res; 
+       //public int setScore(string res)
+       //{  apersD = new Personnal_Details();
+       //apersD.residentialStatus = res; 
            
-       int  resscore=  apersD.SetScore(res);
-       return resscore;
+       //int  resscore=  apersD.SetScore(res);
+       //return resscore;
            
-       } 
-      //public Personnal_Details Getpersd(int id)
-      // { return persdDAO.GetById(id); }
+       //} 
+   
 
       
 
