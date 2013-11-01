@@ -75,6 +75,12 @@ namespace AF_CS_BO
                      = (int)resStatus.living_with_parents;
                  residentialscore = r;
              }
+             if (res == Convert.ToString(resStatus.owner_with_no_mortgage))
+             {
+                 int r
+                     = (int)resStatus.owner_with_no_mortgage;
+                 residentialscore = r;
+             }
          }
              finally{
           }return  residentialscore;}
