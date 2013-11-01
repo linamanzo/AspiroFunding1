@@ -39,12 +39,14 @@ namespace AF_CS_BLL
            return score;
        }
 
-       public void setScore()
-       {
-           apersD = new Personnal_Details();
-           apersD.SetScore();
+       public int setScore(string res)
+       {  apersD = new Personnal_Details();
+       //apersD.residentialStatus = res; 
            
-       }
+       int  resscore=  apersD.SetScore(res);
+       return resscore;
+           
+       } 
       //public Personnal_Details Getpersd(int id)
       // { return persdDAO.GetById(id); }
 
