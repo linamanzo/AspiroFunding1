@@ -62,6 +62,7 @@
     <Compile Include="DB_Job_History_DAO.cs" />
     <Compile Include="DB_Job_Prospect_DAO.cs" />
     <Compile Include="DB_Personnal_Details_DAO.cs" />
+    <Compile Include="DB_Score_Card_DAO.cs" />
     <Compile Include="DB_User_DAO.cs" />
     <Compile Include="Fabrics\FabricDAO.cs" />
     <Compile Include="ICrud.cs" />

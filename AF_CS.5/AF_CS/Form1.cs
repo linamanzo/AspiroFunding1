@@ -69,8 +69,9 @@ namespace AF_CS
             try
             {
                 scorecardmanager = new Score_CardManager( );
+                scorecardmanager.GetAll();
                 scorecardmanager.setScore(textBox4.Text, textBox3.Text);
-                textBox1.Text = Convert.ToString(this.scorecardmanager.ascoreCard.personalscore);
+                textBox1.Text = Convert.ToString(this.scorecardmanager.ascoreCard.residentialscore);
             //    int id = Convert.ToInt32(textBox2.Text);
             //    persmanager = new Personnal_DetailsManager(id);
 

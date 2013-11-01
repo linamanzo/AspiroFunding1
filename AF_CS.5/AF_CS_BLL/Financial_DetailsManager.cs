@@ -18,7 +18,7 @@ namespace AF_CS_BLL
        }
 
 
-       public Financial_Details GetFinancialStat(int id)
+       public  Financial_Details GetFinancialStat(int id)
        {
            aFinD = financDDAO.GetById(id);
            return aFinD;

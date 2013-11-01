@@ -124,30 +124,33 @@ namespace AF_CS_DAL
             }
         }
 
-        public virtual IEnumerable<T> GetAll()
+        public virtual T GetAll()
         {
-            using (NpgsqlConnection connection = OpenDb())
+             using (NpgsqlConnection connection = (OpenDb()))
             {
                 NpgsqlCommand command = connection.CreateCommand();
                 command.CommandText = cmdGetAll;
-
-                T obj;
-                List<T> list = new List<T>();
-                 try
+                command.CommandType = System.Data.CommandType.Text;
+                
+                T obj = default(T);
+                try
                 {
                     using (NpgsqlDataReader dr = command.ExecuteReader())
                     {
-                        while (dr.Read())
+                        if (dr.HasRows)
                         {
-                            obj = ReaderToObject(dr);
-                            list.Add(obj);
+                            if (dr.Read())
+                            {
+                                obj = ReaderToObject(dr);
+                            }
+                            return obj;
                         }
-                        return list;
+                        else throw new Exception("Inexistant");
                     }
                 }
-                catch (System.Exception ex)
+                catch (Exception ex)
                 {
-                    throw new System.Exception("An error occured: \n" + ex.Message);
+                    throw new Exception("This item could not be found , system :\n" + ex.Message);
                 }
             }
         }

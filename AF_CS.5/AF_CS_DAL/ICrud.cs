@@ -12,8 +12,10 @@ namespace AF_CS_DAL
        void Insert(IEnumerable<T> les);
        //void Delete(object id);
        //void Update(T obj);
-       IEnumerable<T> GetAll();
+       
        T GetById(object id);
        T GetScores(object id);
+
+       T GetAll();
     }
 }
