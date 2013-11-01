@@ -69,7 +69,12 @@ namespace AF_CS_BO
                      = (int)resStatus.renting;
                  residentialscore = r;
              }
-             
+             if (res == Convert.ToString(resStatus.living_with_parents))
+             {
+                 int r
+                     = (int)resStatus.living_with_parents;
+                 residentialscore = r;
+             }
          }
              finally{
           }return  residentialscore;}

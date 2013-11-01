@@ -41,7 +41,7 @@ namespace AF_CS_BLL
 
        public int setScore(string res)
        {  apersD = new Personnal_Details();
-       //apersD.residentialStatus = res; 
+       apersD.residentialStatus = res; 
            
        int  resscore=  apersD.SetScore(res);
        return resscore;
