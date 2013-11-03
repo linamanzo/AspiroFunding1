@@ -9,7 +9,7 @@ using AF_CS_BO;
 namespace AF_CS_BO
 {
     public class ScoreCard
-    {
+    {/*attributes from the database*/
         public int id_all_scores ;
         public int renting_score;
   public int living_with_parent_score ;
@@ -77,14 +77,19 @@ namespace AF_CS_BO
 
 
 
-
+        /* local variables for the score calculation in the manager -  not going to the database yet*/
   public int coursescore;
   public int uniscore;
+
   public int financialscore;
+  public int ccjscore;
+  public int repaymentscore;
+
+        
+        public int personalscore;
         public int residentialscore;
         public int maritalscore;
         public int agescore;
-        public int personalscore;
 
         public ScoreCard()
         {

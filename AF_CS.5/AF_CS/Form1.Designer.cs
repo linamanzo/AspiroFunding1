@@ -76,19 +76,23 @@
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.dataSet1 = new System.Data.DataSet();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(670, 461);
+            this.textBox1.Location = new System.Drawing.Point(185, 454);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(554, 484);
+            this.button1.Location = new System.Drawing.Point(12, 451);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -188,7 +192,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 12;
-           
             // 
             // textBox5
             // 
@@ -467,11 +470,49 @@
             // 
             this.dataSet1.DataSetName = "NewDataSet";
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(100, 456);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(79, 13);
+            this.label25.TabIndex = 47;
+            this.label25.Text = "Personal Score";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(100, 487);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(80, 13);
+            this.label26.TabIndex = 48;
+            this.label26.Text = "Financial Score";
+            // 
+            // textBox22
+            // 
+            this.textBox22.Location = new System.Drawing.Point(185, 484);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(100, 20);
+            this.textBox22.TabIndex = 49;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(594, 490);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(35, 13);
+            this.label27.TabIndex = 50;
+            this.label27.Text = "Score";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 519);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.textBox22);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.label25);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox21);
             this.Controls.Add(this.textBox20);
@@ -578,6 +619,10 @@
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.Button button2;
         private System.Data.DataSet dataSet1;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.Label label27;
     }
 }
 

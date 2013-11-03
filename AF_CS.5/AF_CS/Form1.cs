@@ -70,14 +70,15 @@ namespace AF_CS
             {
                 scorecardmanager = new Score_CardManager( );
                 scorecardmanager.GetAll();
-                scorecardmanager.setScore(textBox4.Text, textBox3.Text);
-                textBox1.Text = Convert.ToString(this.scorecardmanager.ascoreCard.residentialscore);
-            //    int id = Convert.ToInt32(textBox2.Text);
-            //    persmanager = new Personnal_DetailsManager(id);
-
-            //    int score = persmanager.GetScore(id);
-            //    textBox1.Text = String.Format("{0:C}", score);
-            //    textBox1.Focus();
+                scorecardmanager.setScore(textBox4.Text, textBox3.Text, textBox5.Text, textBox7.Text, textBox8.Text);
+                //textBox1.Text = Convert.ToString(this.scorecardmanager.ascoreCard.personalscore);
+                /* Alternatively can be */
+                textBox1.Text = Convert.ToString(this.scorecardmanager.persScore);
+                //textBox2.Text = Convert.ToString(this.scorecardmanager.ascoreCard.financialscore);
+                /* Alternatively can be */
+                textBox22.Text = Convert.ToString(this.scorecardmanager.finScore);
+                textBox2.Text = Convert.ToString(this.scorecardmanager.finalScore);
+      
             }
             catch (Exception ex)
             {
