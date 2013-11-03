@@ -80,6 +80,8 @@
             this.label26 = new System.Windows.Forms.Label();
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox23 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -504,11 +506,30 @@
             this.label27.TabIndex = 50;
             this.label27.Text = "Score";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(13, 567);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(119, 23);
+            this.button3.TabIndex = 51;
+            this.button3.Text = "score dictionary";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // textBox23
+            // 
+            this.textBox23.Location = new System.Drawing.Point(159, 570);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(100, 20);
+            this.textBox23.TabIndex = 52;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 519);
+            this.ClientSize = new System.Drawing.Size(782, 602);
+            this.Controls.Add(this.textBox23);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.textBox22);
             this.Controls.Add(this.label26);
@@ -623,6 +644,8 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox textBox22;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox23;
     }
 }
 

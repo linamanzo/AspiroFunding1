@@ -24,10 +24,17 @@ namespace AF_CS_BLL
        
        public int finalScore;
 
+
+       /*******/
+       public int residscore;
+
+
+
        /*Creating a new Data Access Object to link with the database*/
+     
        public Score_CardManager()
-       {
-           scoreDAO = new DB_Score_Card_DAO();
+       { /*scoreDAO in comment to test the Dictionary*/
+           //scoreDAO = new DB_Score_Card_DAO();
        }
 
        /*Loading all scores from database*/
@@ -219,6 +226,14 @@ namespace AF_CS_BLL
                //ascoreCard.repaymentscore = repScore;
            }
            return repScore;
+       }
+
+
+       public int setscoredict(string res)
+       {
+           ascoreCard = new ScoreCard();
+          residscore= ascoreCard.setsResScoreDict(res);
+          return residscore;
        }
     }
 }

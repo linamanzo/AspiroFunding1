@@ -86,6 +86,13 @@ namespace AF_CS
             }
         }
 
+       private void button3_Click(object sender, EventArgs e)
+       {
+           scorecardmanager = new Score_CardManager();
+           scorecardmanager.setscoredict(textBox4.Text);
+           textBox23.Text = Convert.ToString(this.scorecardmanager.residscore);
+       }
+
        
     }
 }
