@@ -90,7 +90,8 @@ namespace AF_CS_BO
   //public int maritalscore;
   //public int agescore;
 
-
+  public int marital;
+  public int ageScore;
 public int residential;
         public ScoreCard()
         {
@@ -110,19 +111,215 @@ public int residential;
  
 
     };
+        private static readonly Dictionary<string, int> maritalStatuses
+            =new Dictionary<string,int>
+            {
+             {"single", 10} ,
+               {" married", 30} ,
+            {"  divorced", 0 },
+            {"  seperated",10} ,
+    };
 
+        private static readonly Dictionary<string, int> Ages
+= new Dictionary<string, int>
+        
+    {    {"under21",0},
+        {"between2225",5},
+        {"between2530",20},
+        {"between3049",10},
+        {"over50",0}
     
+ 
+
+    };
+
+        private static readonly Dictionary<string, int> TrueFalse
+= new Dictionary<string, int>
+        
+    {
+         
+       { "True", 0},
+        {"Fasle", -999},
+       
+ 
+
+    };
+
+
+    //    private static readonly Dictionary<string, int> CCJSatuses
+    //  = new Dictionary<string, int>
+    //        {
+        
+    //         {"True", -999} ,
+    //           {"False", 0} ,
+         
+    //};
+
+
+    //    private static readonly Dictionary<string, int> RepaymentStatuses
+    // = new Dictionary<string, int>
+    //        {
+        
+    //         {"True", -999} ,
+    //           {"False", 0} ,
+         
+    //};
+
+        private static readonly Dictionary<string, int> UniversityTiers
+     = new Dictionary<string, int>
+            {
+        
+             {"Tier1",50 } ,
+               {"Tier2", 20} ,
+               {"Tier3", 10},
+         
+    };
+
+        private static readonly Dictionary<string, int> CourseTiers
+= new Dictionary<string, int>
+            {
+        
+             {"Tier1",50 } ,
+               {"Tier2", 20} ,
+               {"Tier3", 10},
+         
+    };
+        private static readonly Dictionary<string, int> CourseDuration
+= new Dictionary<string, int>
+            {
+        
+             {"1",30 } ,
+               {"2", 30} ,
+               {"3", 10},
+         
+    };
+
+        private static readonly Dictionary<string, int> CourseType
+= new Dictionary<string, int>
+            {
+        
+             {"full time",30 } ,
+               {"part time", 30} ,
+               {"distance learning", 10},
+         
+    };
+        private static readonly Dictionary<string, int> CourseFees
+= new Dictionary<string, int>
+            {
+          {" under_10k", 20},
+          {"10_20k ", 30},
+          {"20_30k ",10} ,
+    {"over_30k", 0},
+          
+         
+    };
+
+//        private static readonly Dictionary<string, int> PlaceConfirmation
+//= new Dictionary<string, int>
+        
+//    {
+         
+//       { "True", 0},
+//        {"Fasle", -999},
+       
+ 
+
+//    };
+
+//        private static readonly Dictionary<string, int> JobConfirmation
+//= new Dictionary<string, int>
+        
+//    {
+         
+//       { "True", 0},
+//        {"Fasle", -999},
+       
+ 
+
+//    };
+        private static readonly Dictionary<string, int> ExpectedSalary
+= new Dictionary<string, int>
+        
+    {
+         {"under15",0},
+         {"15_25k",10},
+         {"25_50k",30},
+         {"over50",40},
+
+       
+ 
+
+    };
+
+        private static readonly Dictionary<string, int> Grades
+= new Dictionary<string, int>
+        
+    {
+         
+       { "AA", 300},
+        {"A", 250},
+        {"B",200 },
+        {"grey",150},
+
+    };
+
+
         public int setsResScoreDict(string res)
         {
             {
-                 residential = Convert.ToInt32(residentialStatuses[res]);
+                 residential = residentialStatuses[res];
             }
             return residential;
         }
-      
-        
-       
-       
+
+
+        public int setsMarScoreDict(string mar)
+        {
+            {
+              marital   = maritalStatuses[mar];
+            }
+            return marital;
+        }
+
+        public int setsAgeScoreDict(string age)
+        {
+            try
+            {
+                int i = Convert.ToInt32(age);
+                if (i < 21)
+                {
+                    ageScore = Ages[age];
+                }
+
+                if (i >= 22 && i < 25)
+                {
+                    ageScore = Ages[age];
+                }
+
+                if (i >= 25 && i < 30)
+                {
+                    age = "between2530";
+                    ageScore = Ages[age];
+                }
+
+                if (i >= 30 && i < 50)
+                {
+                    ageScore = Ages[age];
+                }
+
+                if (i >= 50)
+                {
+                    ageScore = Ages[age];
+                }
+
+
+            }
+            finally
+            {
+                //ascoreCard.agescore = ageScore;
+            }
+            return ageScore;
+        }
       
         
     }

@@ -229,11 +229,13 @@ namespace AF_CS_BLL
        }
 
 
-       public int setscoredict(string res)
+       public int setscoredict(string age)
        {
            ascoreCard = new ScoreCard();
-          residscore= ascoreCard.setsResScoreDict(res);
+          residscore= ascoreCard.setsAgeScoreDict(age);
           return residscore;
        }
+
+       
     }
 }
